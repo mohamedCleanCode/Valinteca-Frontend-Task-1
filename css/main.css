@@ -1,0 +1,242 @@
+/* Start Global */
+:root {
+  --main-color: #2d2d2d;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* End Global */
+
+/* Start Home  */
+.home,
+.register,
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #ff00002e, #0000ff1f);
+  padding: 30px;
+  border-radius: 8px;
+  /* margin: 50px auto; */
+}
+.register {
+  /* height: 80%; */
+}
+@media (max-width: 767px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.home img {
+  width: 370px;
+  margin: auto;
+}
+@media (max-width: 545px) {
+  .home img {
+    width: 230px;
+  }
+}
+.home .info {
+  flex: 1;
+  margin-left: 30px;
+  margin-top: 45px;
+}
+@media (max-width: 767px) {
+  .home .info {
+    margin-left: 0px;
+  }
+}
+.info h1 {
+  font-style: normal;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .info h1 {
+    margin-bottom: 10px;
+  }
+}
+.info p {
+  color: #1f1249;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .info p {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+}
+.info a {
+  background: linear-gradient(113.87deg, #2663df 14.81%, #758ff0 88.76%);
+  box-shadow: 0px 6px 18px #9cadf2;
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* End Home  */
+
+/* Start Register */
+@media (max-width: 767px) {
+  .register {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+.register img {
+  width: 40%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .register img {
+    width: 35%;
+  }
+}
+@media (max-width: 767px) {
+  .register img {
+    margin: auto;
+  }
+}
+.register form {
+  flex: 1;
+  margin-left: 25px;
+}
+@media (max-width: 767px) {
+  .register form {
+    margin-left: 0;
+  }
+}
+.register h1 {
+  font-weight: bold;
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+@media (max-width: 375px) {
+  .register h1 {
+    margin-top: 15px;
+  }
+}
+.register p {
+  color: #1f1249;
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+@media (max-width: 375px) {
+  .register p {
+    font-size: 14px;
+  }
+}
+.register .inputs {
+  width: 100%;
+}
+.register form .inputs div {
+  width: 100%;
+  margin-bottom: 25px;
+  background-color: white;
+  padding: 4px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .register form .inputs div {
+    margin-bottom: 12;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+input {
+  border: none;
+  padding: 10px 22px;
+  font-size: 19px;
+  caret-color: #9cadf2;
+  width: 100%;
+}
+:focus {
+  outline: none;
+}
+i {
+  color: #9cadf2;
+  position: relative;
+}
+i::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #9cadf2;
+  margin-left: 10px;
+}
+form input[type="submit"] {
+  background: linear-gradient(113.87deg, #2663df 14.81%, #758ff0 88.76%);
+  box-shadow: 0px 6px 18px #9cadf2;
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* End Register */
+
+/* Start Login  */
+.login {
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .login {
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+}
+.login img {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .login img {
+    width: 100%;
+  }
+}
+.login .success {
+  width: 45%;
+}
+.login h1 {
+  color: var(--main-color);
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .login h1 {
+    margin-top: 20px;
+    font-size: 16px;
+    width: 100%;
+  }
+  .login .success {
+    width: 100%;
+  }
+}
+/* End Login  */
