@@ -179,13 +179,22 @@ i {
   color: #9cadf2;
   position: relative;
 }
-i::after {
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+i:not(:last-child):after {
   content: "";
   position: absolute;
   width: 2px;
   height: 100%;
   background-color: #9cadf2;
   margin-left: 10px;
+}
+.show {
+  cursor: pointer;
 }
 form input[type="submit"] {
   background: linear-gradient(113.87deg, #2663df 14.81%, #758ff0 88.76%);

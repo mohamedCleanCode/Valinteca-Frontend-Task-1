@@ -17,11 +17,16 @@
         <img src="./imgs/login.png" alt="neckless">
         <div class="success">
             <h1>Successfully Logged In</h1>
-            <p class="link"></p>
+            <a class="link" href=""></a>
         </div>
     </div>
 
-
+<script>
+    if (localStorage.getItem("email")) {
+            link.innerHTML = localStorage.getItem("email");
+            link.href = `mailto:${localStorage.getItem("email")}`;
+        }
+</script>
 </body>
 
 </html>
