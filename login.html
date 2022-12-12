@@ -21,12 +21,13 @@
         </div>
     </div>
 
-<script>
-    if (localStorage.getItem("email")) {
+    <script>
+        if (localStorage.getItem("email")) {
+            let link = document.querySelector(".link")
             link.innerHTML = localStorage.getItem("email");
             link.href = `mailto:${localStorage.getItem("email")}`;
         }
-</script>
+    </script>
 </body>
 
 </html>

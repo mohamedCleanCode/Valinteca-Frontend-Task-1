@@ -7,31 +7,27 @@ let userPassConfirm = document.querySelector("[name='user-pass-confirm']");
 let showBtns = document.querySelectorAll(".show");
 let link = document.querySelector(".link");
 
-console.log(true);
 // Function To Handel Data
 function sendData(e) {
-  let lock = false;
+  e.preventDefault();
   let active = document.querySelectorAll(".active");
   if (active.length === 4) {
-    lock = true;
-    let data = {
-      username: userName.value.trim(),
-      email: userEmail.value,
-      password: userPass,
-      password_confirmation: userPassConfirm,
-    };
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
     fetch("https://goldblv.com/api/hiring/tasks/register", {
-      method: POST,
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => console.log(err));
     window.location.href = "../login.html";
-  }
-  if (lock === false) {
-    e.preventDefault();
-    alert("Fields Can't Be Empty");
   }
 }
 
